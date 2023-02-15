@@ -44,6 +44,7 @@ gem "bootsnap", require: false
 
 # add foreman to run both web and worker processes on rails start
 gem 'foreman'
+gem 'google-cloud-pubsub'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
