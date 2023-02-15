@@ -22,6 +22,9 @@ class PubSubListener
 
     subscriber = subscription&.listen do |message|
       puts "User request (#{message.message.data})"
+      user = User.new(name: message.message.data)
+      user.save
+      message.acknowledge!
     end
 
     # Start background threads that will call block passed to listen.
